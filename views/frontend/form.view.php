@@ -11,7 +11,7 @@
     <textarea class="input-xxlarge" rows="10" name="contact_body"><?php echo $body; ?></textarea><br /><br />
 
     <?php if (Option::get('captcha_installed') == 'true') { ?>
-    <label><?php echo __('Captcha', 'users'); ?><label>
+    <label><?php echo __('Captcha', 'users'); ?></label>
     <input type="text" name="answer"><?php if (isset($errors['captcha_wrong'])) echo Html::nbsp(3).'<span class="error">'.$errors['captcha_wrong'].'</span>'; ?>
     <?php CryptCaptcha::draw(); ?>
     <?php } ?>
