@@ -1,5 +1,5 @@
-<?php if (Notification::get('success')) Alert::success(Notification::get('success')); ?>
-<?php if (Notification::get('error')) Alert::error(Notification::get('error')); ?>
+<?php if (Notification::get('success')) echo Notification::get('success'); ?>
+<?php if (Notification::get('error'))  echo Notification::get('error'); ?>
 <br />
 <form method="post">
     <?php echo (Form::hidden('csrf', Security::token())); ?>
